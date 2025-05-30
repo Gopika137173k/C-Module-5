@@ -15,8 +15,42 @@ To write a C program to calculate the product (factorial) of a given natural num
    - **Print** the result.
 
 ## Program
-Add code here
+```
+#include <stdio.h>
+
+int find_factorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * find_factorial(n - 1);
+}
+
+int main() {
+    int num, fact;
+
+    printf("Enter a natural number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        fact = find_factorial(num);
+        printf("Factorial of %d is %d\n", num, fact);
+    }
+
+    return 0;
+}
+```
+
 
 ## Output
+Sample Output 1:
+Enter a natural number: 5
+Factorial of 5 is 120
+
+Sample Output 2:
+Enter a natural number: 0
+Factorial of 0 is 1
 
 ## Result
+Program was implemented and executed.
