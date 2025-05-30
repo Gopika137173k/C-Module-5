@@ -28,9 +28,45 @@ To write a C program to read and display an array of 6 integer elements using po
 6. **End** the program.
 
 ## Program
-Add code here
+```
+#include <stdio.h>
+
+int main() {
+    int i, n;
+    int arr[10];
+    int *parr = arr;
+
+    printf("Enter number of elements (max 10): ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", parr + i);
+    }
+
+    printf("The elements are: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", *(parr + i));
+    }
+    printf("\n");
+
+    return 0;
+}
+```
 
 ## Output
+Sample Output 1:
+Enter number of elements (max 10): 6
+Enter 6 elements:
+1 2 3 4 5 6
+The elements are: 1 2 3 4 5 6 
+
+Sample Output 2:
+Enter number of elements (max 10): 4
+Enter 4 elements:
+10 20 30 40
+The elements are: 10 20 30 40 
 
 ## Result
+Program was implemented and executed.
 
